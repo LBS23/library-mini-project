@@ -9,25 +9,27 @@
 <body>
     <h1 class="library-title">Library Project</h1>
     <button id="toggle-form">Add Book</button>
-    <form class="display-none book-form">
-        <label>
-            Book Name:
-            <input type="text" required id="book-title">
-        </label>
-        <label>
-            Book Author
-            <input type="text" required id="book-author">
-        </label>
-        <label>
-            Book Pages:
-            <input type="number" required min="1" id="book-pages">
-        </label>
-        <label class="checkbox-item">
-            <input type="checkbox" id="book-read-status" class="checkbox-item">
-            Read/Not Read
-        </label>
-        <button id="submit-book">Submit Book</button>
-    </form>
+    <div class="modal" id="form-modal">
+        <form class="book-form modal-content" id="form-book">
+            <label>
+                Book Name:
+                <input type="text" required id="book-title" name="bookName">
+            </label>
+            <label>
+                Book Author
+                <input type="text" required id="book-author" name="bookAuthor">
+            </label>
+            <label>
+                Book Pages:
+                <input type="number" required min="1" id="book-pages" name="bookPages">
+            </label>
+            <label class="checkbox-item">
+                <input type="checkbox" id="book-read-status" class="checkbox-item" name="bookRead">
+                Read/Not Read
+            </label>
+            <button id="submit-book" type="submit">Submit Book</button>
+        </form>
+    </div>
     <section id="card-container">
         
     </section>
