@@ -1,0 +1,81 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+.library-title {
+    font-size: 2em;
+    text-align: center;
+    padding: 1rem;
+}
+
+#toggle-form {
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.025rem;
+    align-self: center;
+}
+
+#toggle-form:hover {
+    cursor: pointer;
+}
+
+.book-form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    gap: 5px;
+}
+
+.book-form input {
+    height: 1.5rem;
+}
+
+/*Rule to center the checkbox input */
+.checkbox-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    gap: 3px;
+}
+
+#submit-book {
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid hsl(158, 95%, 34%);
+    color: white;
+    background-color: hsla(158, 95%, 34%, 1);
+}
+
+#submit-book:hover {
+    cursor: pointer;
+    background-color: hsla(158, 95%, 20%, 1);
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: row;
+}
+

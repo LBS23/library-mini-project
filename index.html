@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mini Library Project</title>
+</head>
+<body>
+    <h1 class="library-title">Library Project</h1>
+    <button id="toggle-form">Add Book</button>
+    <form class="display-none book-form">
+        <label>
+            Book Name:
+            <input type="text" required id="book-title">
+        </label>
+        <label>
+            Book Author
+            <input type="text" required id="book-author">
+        </label>
+        <label>
+            Book Pages:
+            <input type="number" required min="1" id="book-pages">
+        </label>
+        <label class="checkbox-item">
+            <input type="checkbox" id="book-read-status" class="checkbox-item">
+            Read/Not Read
+        </label>
+        <button id="submit-book">Submit Book</button>
+    </form>
+    <section id="card-container">
+        
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
