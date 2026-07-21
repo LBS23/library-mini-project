@@ -40,7 +40,7 @@ function createCard(bookTitle, bookAuthor, bookPages, readCheck, id) {
     cardInput.checked = readCheck;
     removeButton.textContent = "Remove Book";
     removeButton.classList.add("deleteBtn");
-    removeButton.addEventListener("click", removeCardFromContainer);
+    removeButton.addEventListener("click", removeBook);
     card.append(cardTitle, cardAuthor, cardPages, cardRead, removeButton);
     return card;
 }
@@ -50,9 +50,13 @@ function addCardToContainer(card) {
     cardContainer.appendChild(card);
     return cardContainer;
 }
-function removeCardFromContainer(event) {
+function removeBook(event) {
     const card = event.target.parentElement;
+    const idToRemove = card.dataset.id;
+    const index = library.findIndex(book => book.id === idToRemove);
+    library.splice(index, 1);
     card.remove();
+
 }
 addButton.addEventListener("click", () => {
     queryModal.style.display = "flex";
