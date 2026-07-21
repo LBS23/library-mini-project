@@ -98,7 +98,22 @@ button, input {
     gap: 8px;
 }
 
-.onHover-delete{ 
+.card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.deleteBtn {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: 1px solid red;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 10px;
     cursor: pointer;
-    background-color: rgb(225, 0, 0)
+
 }
